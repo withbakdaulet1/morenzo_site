@@ -2,7 +2,7 @@ import React from 'react';
 import { InstagramIcon } from 'lucide-react';
 import { Logo } from './Logo';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { contacts } from '../utils/contacts';
+import { contacts, trackWhatsAppContact } from '../utils/contacts';
 
 export function Footer() {
   return (
@@ -24,6 +24,7 @@ export function Footer() {
                   href={contacts.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={trackWhatsAppContact}
                   className="inline-flex items-center gap-2.5 text-base text-cream/80 transition-colors duration-150 ease-premium hover:text-whatsapp">
                   
                   <WhatsAppIcon className="h-4 w-4 text-whatsapp" />

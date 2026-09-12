@@ -1,3 +1,7 @@
+export function trackWhatsAppContact() {
+  window.fbq?.('track', 'Contact');
+}
+
 export const contacts = {
   whatsappUrl: 'https://wa.me/77770693798',
   whatsappLabel: '+7 777 069 3798',

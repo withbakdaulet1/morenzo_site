@@ -4,7 +4,7 @@ import { InstagramIcon, MapPinIcon } from 'lucide-react';
 import { Logo } from './Logo';
 import { ActionButton } from './ActionButton';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { contacts } from '../utils/contacts';
+import { contacts, trackWhatsAppContact } from '../utils/contacts';
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
@@ -41,7 +41,8 @@ export function Hero() {
               href={contacts.whatsappUrl}
               variant="whatsapp"
               size="lg"
-              icon={<WhatsAppIcon className="h-5 w-5" />}>
+              icon={<WhatsAppIcon className="h-5 w-5" />}
+              onClick={trackWhatsAppContact}>
               
               Написать в WhatsApp
             </ActionButton>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActionButton } from './ActionButton';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { contacts } from '../utils/contacts';
+import { contacts, trackWhatsAppContact } from '../utils/contacts';
 
 export function FinalCta() {
   return (
@@ -22,7 +22,8 @@ export function FinalCta() {
             variant="whatsapp"
             size="lg"
             icon={<WhatsAppIcon className="h-5 w-5" />}
-            className="w-full sm:w-auto">
+            className="w-full sm:w-auto"
+            onClick={trackWhatsAppContact}>
             
             Написать в WhatsApp
           </ActionButton>
