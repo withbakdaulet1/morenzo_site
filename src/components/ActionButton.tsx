@@ -7,6 +7,7 @@ interface ActionButtonProps {
   icon?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 export function ActionButton({
@@ -15,7 +16,8 @@ export function ActionButton({
   size = 'md',
   icon,
   children,
-  className = ''
+  className = '',
+  onClick
 }: ActionButtonProps) {
   const base =
   'inline-flex items-center justify-center gap-2.5 whitespace-nowrap font-bold transition-colors duration-150 ease-premium';
@@ -33,6 +35,7 @@ export function ActionButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={onClick}
       className={`${base} ${sizing} ${look} ${className}`}>
       
       {icon}
